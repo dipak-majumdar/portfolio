@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 // import Navbar from './components/Navbar';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 import en from './assets/locales/en.json';
 
@@ -22,6 +23,8 @@ function App() {
             <Route path="/about" element={<About />} />
           </Routes>
         </main>
+      <Footer section={en.footer} />
+
       </>
     </Router>
   );
