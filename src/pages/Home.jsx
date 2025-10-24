@@ -3,6 +3,7 @@ import "../assets/styles/pages/home.sass"
 import Hero from '../components/Hero';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
+import About from '../components/About';
 
 function Home({ home, projects, skills }) {
   return (
@@ -10,6 +11,7 @@ function Home({ home, projects, skills }) {
       <Hero title={home.hero.title} description={home.hero.description} button={home.hero.button} status={home.hero.status} />
       <Projects section={home.projects} t={projects} limit={3} />
       <Skills section={home.skills} t={skills} />
+      <About section={home.about} />
     </>
   )
 }

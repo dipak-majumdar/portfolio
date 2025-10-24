@@ -1,26 +1,22 @@
 import React from 'react';
+import aboutMe from '../assets/images/about-me.png';
 
-const About = () => {
-  return (
-    <div className="about">
-      <h1>About Me</h1>
-      <div className="about-content">
-        <div className="about-text">
-          <p>Hello! I'm a passionate developer with experience in building modern web applications.</p>
-          <p>My journey in software development started with a curiosity about how things work, which led me to pursue a career in this exciting field.</p>
-          <h3>Skills</h3>
-          <ul className="skills-list">
-            <li>React.js</li>
-            <li>JavaScript (ES6+)</li>
-            <li>HTML5 & CSS3</li>
-            <li>Responsive Design</li>
-            <li>Git & Version Control</li>
-          </ul>
-        </div>
-      </div>
-      <a href="/" className="btn">Back to Home</a>
-    </div>
-  );
+export default function About({section}) {
+    return (
+        <>
+        <section className="about">
+            <div className="about__content">
+                <h2 className="h2">{section.title}</h2>
+                <div className="about__text">
+                    {section.description.map(
+                        (text, idx) =>
+                            <p className="about__description" key={idx}>{text}</p>
+                    )}
+                </div>
+
+                <a href="/about-me" className="button">{section.button} -></a>
+            </div>
+            <img src={aboutMe} alt="" className="about__image" />
+        </section>
+        </>);
 };
-
-export default About;
