@@ -1,6 +1,5 @@
 import React from 'react';
 import skills from "../consts/skills";
-import techs from "../consts/techs";
 
 export default function SkillBlock({ id, t }) {
     return (
@@ -8,8 +7,9 @@ export default function SkillBlock({ id, t }) {
             <div className="skill-block__name">{t[id]}</div>
             <ul className="skill-block__list">
                 {skills[id].map((techIndex) => (
+                    
                     <li key={techIndex} className="skill-block__skill">
-                        {techs[techIndex]}
+                        {techIndex}
                     </li>
                 ))}
             </ul>

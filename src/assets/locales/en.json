@@ -12,10 +12,10 @@
     },
     "skills": {
         "language": "Languages",
-        "database": "Databases",
-        "other": "Other",
-        "tool": "Tools",
-        "framework": "Frameworks"
+        "framework": "Frameworks",
+        "backend": "Backend",
+        "frontend": "Frontend",
+        "tool": "Tools"
     },
     "projects": {
         "chertnodes": {

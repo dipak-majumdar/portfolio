@@ -16,7 +16,6 @@ export default function Skills({ section, t }) {
                 </div>
                 <div className="skills__list">
                     {Object.keys(skillList)
-                        .filter(id => id !== "tool")
                         .map((id) => (
                             <SkillBlock key={id} id={id} t={t} />
                         ))}
