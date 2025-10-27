@@ -14,7 +14,7 @@ export default function About({section}) {
                     )}
                 </div>
 
-                <a href="/about-me" className="button">{section.button} -></a>
+                <a href="/about-me" className="button">{section.button} &gt;</a>
             </div>
             <img src={aboutMe} alt="" className="about__image" />
         </section>

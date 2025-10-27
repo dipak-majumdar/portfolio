@@ -4,14 +4,17 @@ import websites from "../consts/websites";
 import techs from "../consts/techs";
 import media from "../consts/media";
 
-export default function Project({ id, t }) {
-    const project = projects.find(p => p.id === id);
-    
-    if (!project) {
-        return <div>Project not found</div>;
-    }
+export default function Project({ eachProject, t }) {
 
-    const { hasImage, techs: projectTech, links } = project;
+    // console.log(eachProject)
+
+    // const project = projects.find(p => p.id === id);
+    
+    // if (!project) {
+    //     return <div>Project not found</div>;
+    // }
+
+    const { hasImage, links } = eachProject;
 
     const mapLinks = (links) => {
         return Object.keys(links).map(link => {
@@ -39,23 +42,23 @@ export default function Project({ id, t }) {
         <div className="project">
             {hasImage && (
                 <img 
-                    src={`/src/assets/images/projects/${id}.webp`} 
-                    alt={t[id]?.name || id} 
+                    src={`/src/assets/images/projects/${eachProject.name.toLowerCase()}.png`} 
+                    alt={eachProject.name} 
                     className="project__image"
                 />
             )}
             
             <ul className="project__techs">
-                {projectTech.map(tech => (
+                {eachProject.techs.map(tech => (
                     <li key={tech} className="project__tech">
-                        {techs[tech]}
+                        {tech}
                     </li>
                 ))}
             </ul>
 
             <div className="project__content">
-                <div className="project__name">{t[id]?.name || id}</div>
-                <div className="project__description">{t[id]?.description || ''}</div>
+                <div className="project__name">{eachProject.name}</div>
+                <div className="project__description">{eachProject.description || ''}</div>
                 <div className="project__links">{mapLinks(links)}</div>
             </div>
         </div>

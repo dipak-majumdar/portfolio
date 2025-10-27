@@ -1,54 +1,54 @@
+
 /**
  * @type {import("../../types/Project").Project[]}
  */
 const projects = [
     {
-        id: "deplos",
+        name: "Fastlinky",
         links: {
-            figma: "1198393124994627983",
             live: "deplos.github.io",
             github: "Deplos/deplos.github.io"
         },
-        techs: ["pug", "stylus", "node"],
+        techs: ["PHP", "MySql", "JS", "Bootstrap"],
         hasImage: true,
     },
     {
-        id: "pixel-battle",
+        name: "Viacon",
         links: {
             live: "pixelbattle.fun",
             github: "pixelate-it/pixelbattle-frontend",
         },
-        techs: ["preact", "css", "pixijs", "ts"],
+        techs: ["Laravel", "JS", "MySql", "Bootstrap"],
         hasImage: true
     },
     {
-        id: "feedrum",
+        name: "MSOLS Int",
         links: {
             github: "Feedrum-Project/feedrum-next",
             figma: "1314605686829534158"
         },
-        techs: ["node", "next", "react", "zod"],
+        techs: ["HTML", "CSS", "JS", "Tailwind"],
         hasImage: true,
     },
     {
-        id: "chertnodes",
+        name: "LeeLija",
         links: {
             figma: "1149829028455305659",
         },
-        techs: ["python", "flask", "scss"],
+        techs: ["Laravel", "JS", "MySql", "Bootstrap"],
         hasImage: true,
     },
     {
-        id: "protectx",
-        techs: ["react", "node", "discordJs"],
+        name: "Sona Group",
+        techs: ["PHP", "MySql", "JS", "Bootstrap"],
         links: {
             figma: "1168662007492356291",
         },
         hasImage: true,
     },
     {
-        id: "khanswers",
-        techs: ["express", "node", "ejs"],
+        name: "Stock Nova",
+        techs: ["Django", "React", "Sqlite", "Bootstrap"],
         links: {
             live: "khanswers.vercel.app",
             github: "/kahoot-answers",
@@ -56,8 +56,8 @@ const projects = [
         hasImage: true,
     },
     {
-        id: "kotikbot",
-        techs: ["html", "css", "js"],
+        name: "Sundaram",
+        techs: ["Django", "MySql", "JS", "Tailwind"],
         links: {
             live: "kotikbot.github.io",
             github: "kotikbot/kotikbot.github.io",
@@ -65,37 +65,12 @@ const projects = [
         hasImage: true,
     },
     {
-        id: "portfolio",
-        techs: ["js", "sass", "webpack"],
+        name: "Medicy",
+        techs: ["PHP", "MySql", "React", "JS", "Bootstrap"],
         links: {
             figma: "1164933568884615740",
             github: "/EliasDevis.github.io",
             live: "eliasdevis.github.io"
-        },
-        hasImage: true,
-    },
-
-    {
-        id: "discordbot",
-        techs: ["ts", "discordJs", "node"],
-        links: {
-            github: "/bot-template",
-        },
-        isSmall: true,
-    },
-    {
-        id: "chesspro",
-        techs: ["figma"],
-        links: {
-            figma: "1148344443083977909",
-        },
-        isSmall: true,
-    },
-    {
-        id: "madhost",
-        techs: ["pug", "less", "gulp", "node"],
-        links: {
-            live: "madhost.pw",
         },
         hasImage: true,
     },

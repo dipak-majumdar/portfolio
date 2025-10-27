@@ -1,11 +1,13 @@
+import React from "react";
 import Project from "./Project";
-import projectList from "../consts/projects";
+import projects from "../consts/projects";
 
-export default function ProjectList({ t, limit = projectList.length, filter = () => true }) {
+export default function ProjectList({limit = projects.length, filter = () => true }) {
+    // print each project here
     return (
         <div className="project-list">
-            {projectList.filter(filter).slice(0, limit).sort((a, b) => a.hasImage - b.hasImage).map(({ id }) => (
-                <Project key={id} id={id} t={t} />
+            {projects.filter(filter).slice(0, limit).sort((a, b) => a.hasImage - b.hasImage).map((eachproject, {id}) => (
+                <Project key={id} eachProject={eachproject} />
             ))}
         </div>
     );

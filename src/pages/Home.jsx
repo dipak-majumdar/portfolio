@@ -7,11 +7,11 @@ import About from '../components/About';
 import Contacts from '../components/Contacts';
 
 
-function Home({ home, projects, skills }) {
+function Home({ home, skills }) {
   return (
     <>
       <Hero title={home.hero.title} description={home.hero.description} button={home.hero.button} status={home.hero.status} />
-      <Projects section={home.projects} t={projects} limit={3} />
+      <Projects section={home.projects} />
       <Skills section={home.skills} t={skills} />
       <About section={home.about} />
       <Contacts section={home.contacts}/>

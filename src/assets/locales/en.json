@@ -17,60 +17,6 @@
         "frontend": "Frontend",
         "tool": "Tools"
     },
-    "projects": {
-        "chertnodes": {
-            "name": "ChertNodes",
-            "description": "Minecraft servers hosting"
-        },
-        "protectx": {
-            "name": "ProtectX web",
-            "description": "Discord anti-crash bot"
-        },
-        "khanswers": {
-            "name": "Kahoot Answers",
-            "description": "Get answers from kahoot quiz"
-        },
-        "kotikbot": {
-            "name": "KotikBot",
-            "description": "Landing for multi-functional cute discord bot"
-        },
-        "portfolio": {
-            "name": "This Portfolio",
-            "description": "My personal portfolio"
-        },
-        "blog": {
-            "name": "My blog",
-            "description": "Front-end of my future blog website"
-        },
-        "discordbot": {
-            "name": "Discord Bot Boilerplate",
-            "description": "Start creating scalable discord.js bot with typescript in seconds"
-        },
-        "chesspro": {
-            "name": "Chess PRO",
-            "description": "Landing page about service for viewing chess tournaments"
-        },
-        "ooku": {
-            "name": "Ooku",
-            "description": "Link shortener with discord auth"
-        },
-        "madhost": {
-            "name": "MadHost",
-            "description": "Minecraft and websites hosting with low prices"
-        },
-        "feedrum": {
-            "name": "Feedrum",
-            "description": "Ukrainian social network designed for programmers"
-        },
-        "deplos": {
-            "name": "Deplos",
-            "description": "Game servers hosting"
-        },
-        "pixel-battle": {
-            "name": "Pixel Battle",
-            "description": "Pixel art battle game"
-        }
-    },
     "pages": {
         "home": {
             "hero": {
