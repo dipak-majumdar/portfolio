@@ -1,5 +1,4 @@
 import React from 'react';
-import aboutMe from '../assets/images/about-me.png';
 
 export default function About({section}) {
     return (
@@ -13,10 +12,8 @@ export default function About({section}) {
                             <p className="about__description" key={idx}>{text}</p>
                     )}
                 </div>
-
-                <a href="/about-me" className="button">{section.button} &gt;</a>
+                {/* <a href="/about-me" className="button">{section.button} &gt;</a> */}
             </div>
-            <img src={aboutMe} alt="" className="about__image" />
         </section>
         </>);
 };

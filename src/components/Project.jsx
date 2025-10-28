@@ -32,7 +32,7 @@ export default function Project({ eachProject, t }) {
 
             return (
                 <a key={link} href={href} className={`button ${className}`}>
-                    {name} =&gt;
+                    {name}
                 </a>
             );
         });
