@@ -40,6 +40,23 @@
                 ],
                 "button": "View all"
             },
+            "experiences": {
+                "title": "Experience",
+                "items": [
+                    {
+                        "title": "Frontend Developer",
+                        "company": "Tech Solutions Inc.",
+                        "period": "2021 - Present",
+                        "description": "Developing and maintaining web applications using React.js and modern JavaScript. Collaborating with cross-functional teams to deliver high-quality products."
+                    },
+                    {
+                        "title": "Junior Web Developer",
+                        "company": "Digital Creatives",
+                        "period": "2019 - 2021",
+                        "description": "Built responsive websites and web applications. Worked with HTML, CSS, and JavaScript to create engaging user experiences."
+                    }
+                ]
+            },
             "contacts": {
                 "title": "contacts",
                 "text": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
