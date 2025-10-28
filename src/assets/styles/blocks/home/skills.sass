@@ -12,20 +12,25 @@
         margin-bottom: 16px
 
     &__list
-        column-gap: 16px
-        columns: 3
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+        gap: 16px
+        width: 100%
+        
 
-        @media (max-width: variables.$tabletScreen) 
-            columns: 2
+        .skill-block:last-child
+            grid-column: 1 / -1
 
-        @media (max-width: variables.$mobileScreen) 
-            columns: 1
-    
+            /* For medium screens */
+            @media (min-width: 664px)
+                @media (max-width: 879px)
+                    grid-column: span 2
 
-    &__illustrations, &__list
+    &__illustrations
         flex: 1 1 0
 
 .illustrations
+    display: none
     position: relative
     min-width: 300px
     min-height: 300px
