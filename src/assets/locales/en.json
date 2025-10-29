@@ -26,11 +26,11 @@
                 "status": "Open for new opportunities"
             },
             "projects": {
-                "title": "projects",
+                "title": "Projects",
                 "button": "View all"
             },
             "skills": {
-                "title": "skills"
+                "title": "Skills"
             },
             "about": {
                 "title": "about",
@@ -45,20 +45,20 @@
                 "items": [
                     {
                         "title": "Frontend Developer",
-                        "company": "Tech Solutions Inc.",
-                        "period": "2021 - Present",
+                        "company": "Leelija Web Solutions Private Limited.",
+                        "period": "2022 - Present",
                         "description": "Developing and maintaining web applications using React.js and modern JavaScript. Collaborating with cross-functional teams to deliver high-quality products."
                     },
                     {
-                        "title": "Junior Web Developer",
-                        "company": "Digital Creatives",
-                        "period": "2019 - 2021",
+                        "title": "Full Stack Developer",
+                        "company": "Leelija Web Solutions Private Limited.",
+                        "period": "2021 - 2022",
                         "description": "Built responsive websites and web applications. Worked with HTML, CSS, and JavaScript to create engaging user experiences."
                     }
                 ]
             },
             "contacts": {
-                "title": "contacts",
+                "title": "Contacts",
                 "text": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
                 "media": "Message me here",
                 "donate": "Donate me here"
@@ -80,16 +80,7 @@
                 ]
             },
             "skills": {
-                "title": "skills"
-            },
-            "facts": {
-                "title": "fun-facts",
-                "list": [
-                    "I like winter more than summer", 
-                    "I often bike with my friends",
-                    "I like pizza and pasta", 
-                    "My favorite movie is The Green Mile"
-                ]
+                "title": "Skills"
             }
         },
         "contacts": {
