@@ -2,6 +2,8 @@ import React from 'react';
 import Dots from "./Dots";
 import logoOutline from '../assets/images/logo-outline.svg';
 import hero from '../assets/images/hero.png';
+import dipak from '../assets/images/dipak.jpg';
+
 // import "../assets/styles/components/hero.sass";
 
 export default function Hero({ title, description, button, status }) {
@@ -14,8 +16,8 @@ export default function Hero({ title, description, button, status }) {
         </div>
         <div className="hero__illustrations">
             <img src={logoOutline} alt="" className="hero__logo" />
-            <img src={hero} alt="Dipak" className="hero__image" />
-            <div className="hero__status">{status}</div>
+            <img src={dipak} alt="Dipak" className="hero__image" />
+            {/* <div className="hero__status">{status}</div> */}
             <Dots />
         </div>
     </section>

@@ -17,6 +17,23 @@
         "frontend": "Frontend",
         "tool": "Tools"
     },
+    "education": {
+        "title": "Education",
+        "items": [
+            {
+                "degree": "Computer Science and Engineering",
+                "institution": "Birbhum Institute of Engineering and Technology",
+                "period": "2021 - 2024",
+                "description": "Specialized in Software Development and Web Technologies. Graduated with First Class Honors."
+            },
+            {
+                "degree": "Computer Science and Technology",
+                "institution": "Raja Ranjit Kishore Government Polytechnic",
+                "period": "2018 - 2021",
+                "description": "Major in Computer Science. Scored 95% in final examinations."
+            }
+        ]
+    },
     "pages": {
         "home": {
             "hero": {
@@ -33,10 +50,10 @@
                 "title": "Skills"
             },
             "about": {
-                "title": "about",
+                "title": "Summary",
                 "description": [
-                    "I’m a self-taught front-end developer based in Warsaw, Poland. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. ",
-                    "Transforming my creativity and knowledge into a websites has been my passion for over two years. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks."
+                    "Experienced Full-Stack Developer with over 3+ years of hands-on experience. Proven ability to develop and maintain high-quality websites and web applications. Seeking a challenging software development role where I can leverage my skills and experience to make a significant contribution in a dynamic environment.",
+                    ""
                 ],
                 "button": "View all"
             },
@@ -57,34 +74,29 @@
                     }
                 ]
             },
+            "strengths":{
+                "title" : "Strenths",
+                "item": [
+                    {
+                        "name": "Problem-Solving: ",
+                        "description" : "Strong ability to identify and resolve complex issues, ensuring secure, efficient, and user-friendly web applications."
+                    },
+                    {
+                        "name": "Collaborative Team Player: ",
+                        "description" : "Effective at collaborating with team members, leveraging diverse perspectives to achieve project goals and deliver successful outcomes."
+                    },
+                    {
+                        "name": "Adaptability: ",
+                        "description" : "Thrive in dynamic environments with a commitment to continuous learning and staying updated on industry trends and technologies."
+                    }
+                ]
+            },
             "contacts": {
                 "title": "Contacts",
                 "text": "I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me",
                 "media": "Message me here",
                 "donate": "Donate me here"
             }
-        },
-        "projects": {
-            "description": "All of my projects",
-            "decent": "decent",
-            "small": "small",
-            "inProgress": "unfinished"
-        },
-        "about": {
-            "description": "Who am i",
-            "about": {
-                "description": [
-                    "I’m a self-taught front-end developer based in Warsaw, Poland. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. ",
-                    "Transforming my creativity and knowledge into a websites has been my passion for over a two years. I have been helping various clients to establish their presence online. ",
-                    "I always strive to learn about the newest technologies and frameworks. "
-                ]
-            },
-            "skills": {
-                "title": "Skills"
-            }
-        },
-        "contacts": {
-            "description": "How to contact me"
         }
     }
 }

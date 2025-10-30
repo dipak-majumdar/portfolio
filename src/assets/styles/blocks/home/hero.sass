@@ -6,13 +6,16 @@
     flex-wrap: wrap
 
     .dots
+        display: none
         position: absolute
         top: 40%
         width: 12vmin
         left: 70%
-        z-index: 4
+        z-index: 2
 
     &__logo
+        display: none
+        opacity: .2
         position: absolute
         width: 30vmin
         top: 10%
@@ -21,8 +24,12 @@
     
     &__image
         position: relative
-        z-index: 2
-        border-bottom: 1px solid var(--primary)
+        z-index: 3
+        width: 40%
+        margin-left: auto
+        border: 1px solid var(--gray)
+        border-radius: 8px
+        box-shadow: 0 4px 16px rgba(0,0,0,.1)
 
     &__content, &__illustrations
         flex: 1 1 0

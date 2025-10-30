@@ -19,7 +19,7 @@ function App() {
         <Header t={en} />
         <main className="container content">
           <Routes>
-            <Route path="/" element={<Home home={en.pages.home} projects={en.projects} skills={en.skills} />} />
+            <Route path="/" element={<Home home={en.pages.home} projects={en.projects} skills={en.skills} education={en.education} />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </main>
