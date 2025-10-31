@@ -18,7 +18,6 @@ function Home({ home, skills, education }) {
       <Experiences section={home.experiences} />
       <Education section={education} />
       <About section={home.about} />
-      <Contacts section={home.contacts}/>
     </>
   )
 }
