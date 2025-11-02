@@ -1,16 +1,68 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern portfolio website built with React and Vite, showcasing projects, skills, and contact information. This project features multi-language support, responsive design, and a clean UI.
 
-Currently, two official plugins are available:
+## Features
+- Project showcase with images, tech stack, and live/demo links
+- Multi-language support (English, Russian, Ukrainian)
+- Responsive design using SASS
+- Custom components for About, Skills, Projects, Contacts, and more
+- Easy to add new projects via `src/consts/projects.js`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## React Compiler
+### Prerequisites
+- Node.js (v16 or higher recommended)
+- npm
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Installation
+```powershell
+npm install
+```
 
-## Expanding the ESLint configuration
+### Running the Development Server
+```powershell
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Open [http://localhost:5173](http://localhost:5173) in your browser to view the site.
+
+## Project Structure
+```
+src/
+  components/      # Reusable React components
+  consts/          # Project, tech, and media constants
+  helpers/         # Utility functions
+  pages/           # Page-level components
+  assets/          # Images, fonts, icons
+  styles/          # SASS styles
+public/            # Static files
+index.html         # Main HTML file
+vite.config.js     # Vite configuration
+```
+
+## Adding a Project
+Edit `src/consts/projects.js` and add your project in the following format:
+```js
+{
+  name: "Fastlinky",
+  button: {
+    name: "Live",
+    url: "https://fastlinky.com/"
+  },
+  techs: ["PHP", "MySql", "JS", "Bootstrap"],
+  hasImage: true,
+  description: "A fast link shortener and manager."
+}
+```
+
+## Customization
+- Update styles in `src/styles/`
+- Add new languages in `src/assets/locales/`
+- Add images to `src/assets/images/projects/`
+
+## License
+MIT
+
+## Author
+Dipak Majumdar
