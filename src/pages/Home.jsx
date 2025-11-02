@@ -7,14 +7,15 @@ import About from '../components/About';
 import Experiences from '../components/Experiences';
 import Education from '../components/Education';
 import Contacts from '../components/Contacts';
-import SEO from '../components/SEO';
+import { useMetaTags } from '../hooks/useMetaTags';
 import { pageSEO } from '../consts/seo';
 
 
 function Home({ home, skills, education }) {
+  useMetaTags(pageSEO.home);
+  
   return (
     <>
-      <SEO {...pageSEO.home} />
       <Hero name={home.hero.name} title={home.hero.title} description={home.hero.description} button={home.hero.button} status={home.hero.status} />
       <About section={home.about} />
       <Projects section={home.projects} />
