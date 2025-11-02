@@ -6,36 +6,30 @@ import media from "../consts/media";
 
 export default function Project({ eachProject, t }) {
 
-    // console.log(eachProject)
+    const { hasImage, button } = eachProject;
 
-    // const project = projects.find(p => p.id === id);
-    
-    // if (!project) {
-    //     return <div>Project not found</div>;
-    // }
+    const mapLinks = (button) => {
+        // Nothing to render
+        if (!button) return null;
 
-    const { hasImage, links } = eachProject;
-
-    const mapLinks = (links) => {
-        return Object.keys(links).map(link => {
-            let href = "https://" + (link === "live" ? "" : websites[link]) + links[link];
-
-            if (link === "figma") {
-                href = `https://figma.com/community/file/${links[link]}`;
-            }
-            if (link === "github" && links[link].startsWith("/")) {
-                href = media.github + links[link];
-            }
-
-            const className = link === "cached" ? "button__secondary" : "";
-            const name = `${link[0].toUpperCase()}${link.slice(1)}`;
+        // If button is a single-button object like { name: 'Live', url: 'https://...' }
+        if (typeof button === 'object' && (button.url || button.name)) {
+            const href = button.url || '#';
+            const label = button.name || button.label || href;
 
             return (
-                <a key={link} href={href} className={`button ${className}`}>
-                    {name}
+                <a
+                    key={label}
+                    href={href}
+                    className={`button`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {label}
                 </a>
             );
-        });
+        }
+        return null;
     };
 
     return (
@@ -57,9 +51,12 @@ export default function Project({ eachProject, t }) {
             </ul>
 
             <div className="project__content">
-                <div className="project__name">{eachProject.name}</div>
+                <div className='head'>
+                    <h3 className="name">{eachProject.name}</h3>
+                    <a href={button.url} className="button" target="_blank"
+                    rel="noopener noreferrer" >{button.name}</a>
+                </div>
                 <div className="project__description">{eachProject.description || ''}</div>
-                <div className="project__links">{mapLinks(links)}</div>
             </div>
         </div>
     );

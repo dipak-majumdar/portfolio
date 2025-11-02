@@ -12,12 +12,13 @@ import Contacts from '../components/Contacts';
 function Home({ home, skills, education }) {
   return (
     <>
-      <Hero title={home.hero.title} description={home.hero.description} button={home.hero.button} status={home.hero.status} />
+      <Hero name={home.hero.name} title={home.hero.title} description={home.hero.description} button={home.hero.button} status={home.hero.status} />
+      <About section={home.about} />
       <Projects section={home.projects} />
       <Skills section={home.skills} t={skills} />
       <Experiences section={home.experiences} />
       <Education section={education} />
-      <About section={home.about} />
+      <About section={home.summary} />
     </>
   )
 }

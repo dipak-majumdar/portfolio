@@ -3,34 +3,11 @@
 .project
     border: 1px solid var(--gray)
 
-    &__links
-        display: flex
-        justify-content: space-between
-        align-items: center
-        flex-wrap: wrap
-
-        .button
-            font-size: 14px;
-            padding: 4px 12px;
-            font-weight: 500;
-
     &__image
         object-fit: cover
         border-bottom: 1px solid var(--gray)
         aspect-ratio: 16/9
 
-    &__content
-        padding: 16px
-
-    &__name
-        font:
-            size: 24px
-            weight: 500
-
-    &__description
-        color: var(--gray)
-        margin: 16px 0
-    
     &__techs
         display: flex
         flex-wrap: wrap
@@ -38,6 +15,30 @@
         color: var(--gray)
         padding: 8px
         border-bottom: 1px solid var(--gray)
+
+    &__content
+        padding: 16px
+
+        .head
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+            .name
+                font:
+                    size: 24px
+                    weight: 500
+                    
+            .button
+                font-size: 14px;
+                padding: 4px 12px;
+                font-weight: 500;
+
+    &__description
+        color: var(--gray)
+        margin: 16px 0
+    
+    
 
 .project-list
     width: 100%
