@@ -6,7 +6,6 @@ import Skills from '../components/Skills';
 import About from '../components/About';
 import Experiences from '../components/Experiences';
 import Education from '../components/Education';
-import Contacts from '../components/Contacts';
 import { useMetaTags } from '../hooks/useMetaTags';
 import { pageSEO } from '../consts/seo';
 

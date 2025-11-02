@@ -1,7 +1,6 @@
 import React from 'react';
 import Dots from "./Dots";
 import logoOutline from '../assets/images/logo-outline.svg';
-import hero from '../assets/images/hero.png';
 import dipak from '../assets/images/dipak.jpg';
 import linkedin from '../assets/images/icons/linkedin.svg';
 import email from '../assets/images/icons/email.svg';

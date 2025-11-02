@@ -1,10 +1,6 @@
 import React from 'react';
-import projects from "../consts/projects";
-import websites from "../consts/websites";
-import techs from "../consts/techs";
-import media from "../consts/media";
 
-export default function Project({ eachProject, t }) {
+export default function Project({ eachProject}) {
 
     const { hasImage, button } = eachProject;
 
