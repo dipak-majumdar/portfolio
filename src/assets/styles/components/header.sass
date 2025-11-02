@@ -1,5 +1,9 @@
 @use '../default/variables' as variables
 
+.header
+    @media (max-width: variables.$desktopScreen) 
+        display: none
+
 $screen: 768px
 
 .media-header 

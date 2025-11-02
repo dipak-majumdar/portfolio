@@ -50,7 +50,11 @@
         font:
             size: 48px
             weight: 700
-            
+
+    @media (max-width: variables.$tabletScreen)
+        &__name
+            font-size: 38px
+
     &__title 
         min-width: 300px
 
@@ -61,6 +65,10 @@
         span 
             color: var(--primary)
     
+    @media (max-width: variables.$tabletScreen)
+        &__title 
+            font-size: 28px
+        
     &__description
         color: var(--gray)
         margin-top: 32px
@@ -104,3 +112,17 @@
 
         &__illustrations
             display: none
+
+    // Between md and lg: set content/illustrations width split
+    @media (min-width: variables.$tabletScreen) and (max-width: calc(variables.$desktopScreen - 1px))
+        display: flex
+
+        &__content
+            flex: 0 0 auto
+            width: 70%
+        &__illustrations
+            flex: 0 0 auto
+            width: 25%
+
+        &__image
+            width: 80%

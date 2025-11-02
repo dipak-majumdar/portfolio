@@ -10,9 +10,16 @@
         padding: 16px
 
 .content
-    margin-top: 112px
+    margin-top: 70px
     flex: 1
     display: flex
     flex-direction: column
     align-items: center
     gap: 80px
+    
+    @media (max-width: variables.$mobileScreen)
+        margin-top: 5px
+        gap: 65px
+
+    @media (min-width: calc(variables.$mobileScreen + 1px)) and (max-width: calc(variables.$desktopScreen - 1px))
+        margin-top: 32px

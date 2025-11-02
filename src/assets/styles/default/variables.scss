@@ -1,3 +1,14 @@
+@use "sass:map";
+$colors: (
+    primary: 287 60% 65%,
+    primary-op: 287 60% 65% / 0.1,
+    gray: 219 14% 71%,
+    off-white: 0 0% 82%,
+    gray-op: 219 14% 71% / 0.1,
+    background: 218 12% 18%,
+    white: 0 0% 100%,
+);
+
 $colors: (
     primary: 287 60% 65%,
     primary-op: 287 60% 65% / 0.1,
@@ -43,9 +54,9 @@ $breakpoints: (
 }
 
 // Convenience variables for common breakpoints
-$mobileScreen: map-get($breakpoints, 'sm');
-$tabletScreen: map-get($breakpoints, 'md');
-$desktopScreen: map-get($breakpoints, 'lg');
+$mobileScreen: map.get($breakpoints, 'sm');
+$tabletScreen: map.get($breakpoints, 'md');
+$desktopScreen: map.get($breakpoints, 'lg');
 
 /* Examples:
     .component { font-size: 14px; }
