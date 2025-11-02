@@ -2,15 +2,57 @@ $colors: (
     primary: 287 60% 65%,
     primary-op: 287 60% 65% / 0.1,
     gray: 219 14% 71%,
-    off-white:0 0% 82%,
+    off-white: 0 0% 82%,
     gray-op: 219 14% 71% / 0.1,
     background: 218 12% 18%,
     white: 0 0% 100%,
 );
 
+// Breakpoints (mobile-first)
+$breakpoints: (
+    xs: 480px,   // extra small phones
+    sm: 676px,   // small phones / large phones
+    md: 768px,   // tablets
+    lg: 1024px,  // small desktop
+    xl: 1280px,  // large desktop
+    xxl: 1920px  // very large screens
+);
 
-$desktopScreen: 1024px;
-$tabletScreen: 768px;
-$mobileScreen: 500px;
+// Helper function to resolve breakpoint value (accepts key or raw value)
+@function bp-value($size) {
+    @if type-of($size) == 'string' and map-has-key($breakpoints, $size) {
+        @return map-get($breakpoints, $size);
+    }
+    @return $size;
+}
 
+// Usage: @include up(md) { ... } // applies at min-width: 768px and up
+@mixin up($size) {
+    $val: bp-value($size);
+    @media (min-width: $val) {
+        @content;
+    }
+}
 
+// Usage: @include down(md) { ... } // applies at max-width: 768px
+@mixin down($size) {
+    $val: bp-value($size);
+    @media (max-width: $val) {
+        @content;
+    }
+}
+
+// Convenience variables for common breakpoints
+$mobileScreen: map-get($breakpoints, 'sm');
+$tabletScreen: map-get($breakpoints, 'md');
+$desktopScreen: map-get($breakpoints, 'lg');
+
+/* Examples:
+    .component { font-size: 14px; }
+    @include up(md) {
+        .component { font-size: 16px; }
+    }
+
+    This is mobile-first: base styles apply to small screens and `up()` adds styles as
+    the screen gets larger.
+*/
