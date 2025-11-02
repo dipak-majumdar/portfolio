@@ -8,35 +8,13 @@ export default function Project({ eachProject, t }) {
 
     const { hasImage, button } = eachProject;
 
-    const mapLinks = (button) => {
-        // Nothing to render
-        if (!button) return null;
-
-        // If button is a single-button object like { name: 'Live', url: 'https://...' }
-        if (typeof button === 'object' && (button.url || button.name)) {
-            const href = button.url || '#';
-            const label = button.name || button.label || href;
-
-            return (
-                <a
-                    key={label}
-                    href={href}
-                    className={`button`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {label}
-                </a>
-            );
-        }
-        return null;
-    };
+    const imgPath = `/assets/images/projects/${eachProject.name.toLowerCase()}.png`;
 
     return (
         <div className="project">
             {hasImage && (
                 <img 
-                    src={`/src/assets/images/projects/${eachProject.name.toLowerCase()}.png`} 
+                    src={imgPath} 
                     alt={eachProject.name} 
                     className="project__image"
                 />
