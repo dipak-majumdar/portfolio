@@ -6,7 +6,7 @@
     &__image
         object-fit: cover
         border-bottom: 1px solid var(--gray)
-        aspect-ratio: 16/9
+        // aspect-ratio: 16/9
 
     &__techs
         display: flex
@@ -15,6 +15,9 @@
         color: var(--gray)
         padding: 8px
         border-bottom: 1px solid var(--gray)
+    
+    &__tech
+        font-size: 14px
 
     &__content
         padding: 16px
@@ -26,8 +29,8 @@
 
             .name
                 font:
-                    size: 24px
-                    weight: 500
+                    size: 20px
+                    weight: 600
                     
             .button
                 font-size: 14px;
@@ -44,7 +47,7 @@
     width: 100%
     display: grid
 
-    grid-template-columns: repeat(3, 1fr)
+    grid-template-columns: repeat(4, 1fr)
 
     @media (max-width: variables.$desktopScreen)
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))

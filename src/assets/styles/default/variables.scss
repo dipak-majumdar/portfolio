@@ -57,6 +57,8 @@ $breakpoints: (
 $mobileScreen: map.get($breakpoints, 'sm');
 $tabletScreen: map.get($breakpoints, 'md');
 $desktopScreen: map.get($breakpoints, 'lg');
+$screenXL: map.get($breakpoints, 'xl');
+
 
 /* Examples:
     .component { font-size: 14px; }

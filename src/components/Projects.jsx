@@ -10,7 +10,7 @@ export default function Projects({ section }) {
                     {section.button} &gt;
                 </a>
             </div>
-            <ProjectList limit={3} />
+            <ProjectList limit={4} />
         </section>
     );
 };
