@@ -4,7 +4,7 @@ export default function Footer({ section }) {
     return (
         <footer className="footer">
             <div className="container">
-                <div className="footer__copyright">© {section.copyright}</div>
+                <p className="footer__copyright" dangerouslySetInnerHTML={{ __html: section.copyright }}/>
             </div>
         </footer>
     );

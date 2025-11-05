@@ -9,6 +9,8 @@
     float: none
     clear: both
     display: inline-block
+    color: var(--heading)
+    text-transform: uppercase
     
     &::before
         content: "#"
@@ -24,3 +26,11 @@
         transform: translate(100%, -50%)
         right: -16px
         top: 50%
+
+@media (max-width: variables.$mobileScreen)
+    .h2
+        font:
+            size: 24px
+
+        &::after
+            width: 20vw

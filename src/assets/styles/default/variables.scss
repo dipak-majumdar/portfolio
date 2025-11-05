@@ -1,22 +1,14 @@
 @use "sass:map";
 $colors: (
-    primary: 287 60% 65%,
-    primary-op: 287 60% 65% / 0.1,
-    gray: 219 14% 71%,
-    off-white: 0 0% 82%,
-    gray-op: 219 14% 71% / 0.1,
-    background: 218 12% 18%,
-    white: 0 0% 100%,
-);
-
-$colors: (
-    primary: 287 60% 65%,
-    primary-op: 287 60% 65% / 0.1,
-    gray: 219 14% 71%,
-    off-white: 0 0% 82%,
-    gray-op: 219 14% 71% / 0.1,
-    background: 218 12% 18%,
-    white: 0 0% 100%,
+    // Converted from HSL to more widely supported formats (hex / rgba)
+    primary: #C470DB,
+    primary-op: rgba(196,112,219,0.1),
+    gray: #ABB2BF,
+    off-white: #D1D1D1,
+    heading: #FFFFFF,
+    gray-op: rgba(171,178,191,0.1),
+    background: #282C33,
+    white: #FFFFFF,
 );
 
 // Breakpoints (mobile-first)
@@ -58,6 +50,45 @@ $mobileScreen: map.get($breakpoints, 'sm');
 $tabletScreen: map.get($breakpoints, 'md');
 $desktopScreen: map.get($breakpoints, 'lg');
 $screenXL: map.get($breakpoints, 'xl');
+
+
+// Helper: get next breakpoint key in the breakpoints map (null when at end)
+@function next-breakpoint($size) {
+    $keys: map.keys($breakpoints);
+    $idx: index($keys, $size);
+    @if $idx == null {
+        @return null;
+    }
+    @if $idx == length($keys) {
+        @return null; // no next
+    }
+    @return nth($keys, $idx + 1);
+}
+
+// Mixin: apply between two sizes (accepts keys or raw values)
+@mixin between($min, $max) {
+    $minVal: bp-value($min);
+    $maxVal: bp-value($max);
+    @media (min-width: $minVal) and (max-width: calc(#{$maxVal} - 1px)) {
+        @content;
+    }
+}
+
+// Mixin: apply styles only for a named breakpoint 'size' (from size up to next breakpoint - 1px)
+// Example: @include only(md) { ... }  // applies from md (768px) up to lg-1px (1023px)
+@mixin only($size) {
+    $next: next-breakpoint($size);
+    @if $next == null {
+        // last breakpoint, just use min-width
+        @media (min-width: bp-value($size)) {
+            @content;
+        }
+    } @else {
+        @include between($size, $next) {
+            @content;
+        }
+    }
+}
 
 
 /* Examples:

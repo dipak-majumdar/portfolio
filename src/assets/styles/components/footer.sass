@@ -1,12 +1,16 @@
 @use '../default/variables' as variables
 
 .footer 
+    margin-top: 32px
+    margin-bottom: 16px
     max-width: inherit
     width: 100%
     border-top: 1px solid var(--gray)
     padding-top: 32px
-    margin-bottom: 16px
 
     &__copyright
         color: var(--gray)
         text-align: center
+
+        & a
+            text-decoration: underline

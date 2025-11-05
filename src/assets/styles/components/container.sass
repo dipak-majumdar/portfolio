@@ -6,9 +6,16 @@
     margin: 0 auto
     position: relative
 
-    @media (max-width: variables.$desktopScreen)
-        padding: 16px
-
+    @include variables.down(md)
+        padding: 0 16px
+    
+    @include variables.between(md, lg)
+        padding: 0 36px
+    
+    @include variables.between(lg, xl)
+        padding: 0 30px
+    
+    
 .content
     margin-top: 70px
     flex: 1
@@ -19,7 +26,8 @@
     
     @media (max-width: variables.$mobileScreen)
         margin-top: 5px
-        gap: 65px
+        gap: 28px
 
     @media (min-width: calc(variables.$mobileScreen + 1px)) and (max-width: calc(variables.$desktopScreen - 1px))
         margin-top: 32px
+        gap: 42px

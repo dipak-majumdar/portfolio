@@ -6,8 +6,8 @@
         "contacts": "contacts"
     },
     "footer": {
-        "description": "Full Stack Developer based in India",
-        "copyright": "Designed by Dipak Majumdar",
+        "description": "Fullstack Developer based in India",
+        "copyright": "Deployed on <a href='https://www.oracle.com/cloud/' target='_blank' follow='nofollow'>Oracle Cloud</a> by Dipak Majumdar &copy; 2025",
         "media": "Media"
     },
     "skills": {
@@ -38,7 +38,7 @@
         "home": {
             "hero": {
                 "name": "Dipak Majumdar",
-                "title": "<span>Full Stack Developer</span>",
+                "title": "<span>Fullstack Developer</span>",
                 "description": "Expert in Scalable Application Design, Development & Deployment Management. Experienced in Varuous Technologies.",
                 "button": "Contact Me",
                 "status": "Open for new opportunities"

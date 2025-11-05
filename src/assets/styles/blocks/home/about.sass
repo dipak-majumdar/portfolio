@@ -1,14 +1,20 @@
+@use '../../default/variables' as variables
+
 .about
     &__content
         flex: 1 1 0
         min-width: 300px
 
     &__text
-        margin-bottom: 32px
-        margin-top: 30px
+        margin-top: 20px
+        margin-bottom: 0px
         display: flex
         flex-direction: column
         gap: 16px
+
+        @media (max-width: variables.$mobileScreen)
+            margin-top: 10px
+            margin-bottom: 0px
 
     &__description
         color: var(--gray) 

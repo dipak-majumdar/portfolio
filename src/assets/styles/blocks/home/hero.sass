@@ -28,11 +28,20 @@
     &__image
         position: relative
         z-index: 3
-        width: 35%
+        width: 140px
         margin-left: auto
         border: 1px solid var(--gray)
         border-radius: 8px
         box-shadow: 0 4px 16px rgba(0,0,0,.1)
+        
+        @include variables.down(xs)
+            display: none
+
+        @include variables.down(md)
+            width: 100px
+        
+        @include variables.between(sm, xl)
+            width: 120px
 
     // Mobile-first: both content and illustrations can grow/shrink and stack
     &__content
@@ -47,17 +56,23 @@
         flex-direction: column
 
     &__name
+        text-transform: uppercase
         font:
-            size: 48px
+            size: 52px
             weight: 700
 
-    @media (max-width: variables.$tabletScreen)
+    @media (max-width: variables.$mobileScreen)
+        &__name
+            font-size: 30px
+
+    @include variables.between(calc(variables.$mobileScreen + 1px), variables.$tabletScreen)
         &__name
             font-size: 38px
 
     &__title 
+        text-transform: uppercase
         min-width: 300px
-
+        line-height: 18px
         font:
             size: 32px
             weight: 600
@@ -65,18 +80,35 @@
         span 
             color: var(--primary)
     
-    @media (max-width: variables.$tabletScreen)
+    @media (max-width: variables.$mobileScreen)
         &__title 
-            font-size: 28px
-        
+            font-size: 22px
+
+    @include variables.between(calc(variables.$mobileScreen + 1px), variables.$tabletScreen)
+        &__title 
+            font-size: 26px
+
     &__description
         color: var(--gray)
         margin-top: 32px
         margin-bottom: 32px
+
+    &__locationbox
+        color: var(--gray)
+        display: flex
+        align-items: center
+        gap: 8px
+        margin-top: 16px
+        margin-bottom: 18px
+    
+        @media (max-width: variables.$mobileScreen)
+            margin-top: 8px
+            margin-bottom: 18px
     
     &__button__box
         display: flex
         gap: 5px
+
 
     &__status
         padding: 8px
@@ -106,23 +138,17 @@
 
             &:hover
                 color: var(--primary)
-    @media (max-width: variables.$tabletScreen)
+    
+    @include variables.down(xs)
         display: block
         text-align: left
-
-        &__illustrations
-            display: none
-
-    // Between md and lg: set content/illustrations width split
-    @media (min-width: variables.$tabletScreen) and (max-width: calc(variables.$desktopScreen - 1px))
+    
+    @include variables.between(xs, lg)
         display: flex
 
         &__content
             flex: 0 0 auto
-            width: 70%
+            width: 65%
         &__illustrations
             flex: 0 0 auto
             width: 25%
-
-        &__image
-            width: 80%
