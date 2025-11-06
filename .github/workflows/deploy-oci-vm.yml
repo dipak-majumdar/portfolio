@@ -1,0 +1,49 @@
+name: Build and deploy to Oracle Cloud Compute
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22.19.0
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.19.0'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy files to Oracle Cloud Compute via SCP
+        uses: appleboy/scp-action@v0.1.8
+        with:
+          host: ${{ secrets.OCI_VM_HOST }}
+          username: ${{ secrets.OCI_VM_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.OCI_VM_PORT || '22' }}
+          source: "./dist/*"
+          target: ${{ secrets.OCI_VM_PATH || '/var/www/html/dist' }}
+
+      - name: Run remote commands on OCI VM (optional)
+        uses: appleboy/ssh-action@v0.1.9
+        with:
+          host: ${{ secrets.OCI_VM_HOST }}
+          username: ${{ secrets.OCI_VM_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.OCI_VM_PORT || '22' }}
+          script: |
+            echo "Files deployed to ${{ secrets.OCI_VM_PATH || '/var/www/html/dist' }}"
+            # Reload nginx if used
+            sudo systemctl reload nginx || true
+            ls -la ${{ secrets.OCI_VM_PATH || '/var/www/html/dist' }}
