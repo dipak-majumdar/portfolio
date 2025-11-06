@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import MediaIcon from "./MediaIcon";
 import logo from '../assets/images/logo.svg';
@@ -8,6 +8,14 @@ const Header = ({ t }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState('en');
     const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+
+    // Live clock state
+    const [now, setNow] = useState(() => new Date());
+
+    useEffect(() => {
+        const id = setInterval(() => setNow(new Date()), 1000);
+        return () => clearInterval(id);
+    }, []);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -43,7 +51,7 @@ const Header = ({ t }) => {
                 <div className="header__inner">
                     <Link to="/" className="logo">
                         <img className="logo__img" src={logo} alt="Dipak logo" />
-                        <span className="logo__name">Dipak</span>
+                        <span className="logo__name" aria-live="polite">{now.toLocaleTimeString(currentLanguage || 'en-US')}</span>
                     </Link>
                     
                     <div className="dropdown" onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}>
