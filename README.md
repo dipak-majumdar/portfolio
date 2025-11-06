@@ -1,4 +1,9 @@
 # Portfolio
+## Author
+Dipak Majumdar
+
+## License
+MIT
 
 A modern portfolio website built with React and Vite, showcasing projects, skills, and contact information. This project features multi-language support, responsive design, and a clean UI.
 
@@ -58,14 +63,8 @@ Edit `src/consts/projects.js` and add your project in the following format:
 
 ## Customization
 - Update styles in `src/styles/`
-- Add new languages in `src/assets/locales/`
-- Add images to `src/assets/images/projects/`
+- Add images to `public/assets/images/`
 
-## License
-MIT
-
-## Author
-Dipak Majumdar
 
 ## Deploying to Oracle Cloud (Compute)
 
