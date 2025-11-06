@@ -26,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: Deploy files to Oracle Cloud Compute via SCP
-        uses: appleboy/scp-action@v0.1.8
+        uses: appleboy/scp-action@v1.0.0
         with:
           host: ${{ secrets.OCI_VM_HOST }}
           username: ${{ secrets.OCI_VM_USER }}
@@ -36,7 +36,7 @@ jobs:
           target: ${{ secrets.OCI_VM_PATH || '/var/www/html/dist' }}
 
       - name: Run remote commands on OCI VM (optional)
-        uses: appleboy/ssh-action@v0.1.9
+        uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.OCI_VM_HOST }}
           username: ${{ secrets.OCI_VM_USER }}
