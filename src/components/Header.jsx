@@ -5,9 +5,6 @@ import logo from '../assets/images/logo.svg';
 
 const Header = ({ t }) => {
     const location = useLocation();
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [currentLanguage, setCurrentLanguage] = useState('en');
-    const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
 
     // Live clock state
     const [now, setNow] = useState(() => new Date());
@@ -17,26 +14,9 @@ const Header = ({ t }) => {
         return () => clearInterval(id);
     }, []);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
-
-    const handleLanguageChange = (lang) => {
-        setCurrentLanguage(lang);
-        setShowLanguageDropdown(false);
-        // Add language change logic here
-    };
-
 
     return (
         <header className="header">
-            <input 
-                className="hamburger" 
-                type="checkbox" 
-                aria-label="Menu" 
-                checked={isMenuOpen}
-                onChange={toggleMenu}
-            />
 
             <div className="media-header">
                 <span className="media-header__line"></span>
@@ -51,30 +31,10 @@ const Header = ({ t }) => {
                 <div className="header__inner">
                     <Link to="/" className="logo">
                         <img className="logo__img" src={logo} alt="Dipak logo" />
-                        <span className="logo__name" aria-live="polite">{now.toLocaleTimeString(currentLanguage || 'en-US')}</span>
+                        <span className="logo__name" aria-live="polite">{now.toLocaleTimeString('en-US')}</span>
                     </Link>
                     
-                    {/* <div className="dropdown" onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}>
-                        <span className="dropdown__label">{currentLanguage}</span>
-                        {showLanguageDropdown && (
-                            <div className="dropdown__list">
-                                {['en', 'ru', 'ua'].map((lang) => (
-                                    <div 
-                                        key={lang}
-                                        className={`dropdown__option ${currentLanguage === lang ? 'dropdown__option_active' : ''}`}
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            handleLanguageChange(lang);
-                                        }}
-                                    >
-                                        {lang}
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </div> */}
-                    {/* <button className='download-btn'>Download CV</button> */}
-                    <div class="download-button" data-tooltip="Size: 20Mb">
+                    <div class="download-button">
                         <div class="button-wrapper">
                             <div class="text">Download CV</div>
                             <span class="icon">
