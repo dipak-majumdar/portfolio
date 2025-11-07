@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:meta";
 $colors: (
     // Converted from HSL to more widely supported formats (hex / rgba)
     primary: #C470DB,
@@ -23,8 +24,8 @@ $breakpoints: (
 
 // Helper function to resolve breakpoint value (accepts key or raw value)
 @function bp-value($size) {
-    @if type-of($size) == 'string' and map-has-key($breakpoints, $size) {
-        @return map-get($breakpoints, $size);
+    @if meta.type-of($size) == 'string' and map.has-key($breakpoints, $size) {
+        @return map.get($breakpoints, $size);
     }
     @return $size;
 }
