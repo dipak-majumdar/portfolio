@@ -32,7 +32,7 @@ jobs:
           username: ${{ secrets.OCI_VM_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.OCI_VM_PORT || '22' }}
-          source: "./dist/*"
+          source: "./dist/**"
           target: ${{ secrets.OCI_VM_PATH || '/var/www/html/dist' }}
 
       - name: Run remote commands on OCI VM (optional)
