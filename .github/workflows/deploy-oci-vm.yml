@@ -32,8 +32,9 @@ jobs:
           username: ${{ secrets.OCI_VM_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.OCI_VM_PORT || '22' }}
-          source: "./dist/."
-          target: ${{ secrets.OCI_VM_PATH || '/var/www/html/dist' }}
+          source: "dist/*"
+          target: "${{ secrets.OCI_VM_PATH || '/var/www/html' }}/dist/"
+          overwrite: true
 
       - name: Run remote commands on OCI VM (optional)
         uses: appleboy/ssh-action@v1.2.2
@@ -43,7 +44,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.OCI_VM_PORT || '22' }}
           script: |
-            echo "Files deployed to ${{ secrets.OCI_VM_PATH || '/var/www/html/dist' }}"
+            echo "Files deployed to ${{ secrets.OCI_VM_PATH || '/var/www/html' }}/dist"
             # Reload nginx if used
             sudo systemctl reload nginx || true
-            ls -la ${{ secrets.OCI_VM_PATH || '/var/www/html/dist' }}
+            ls -la ${{ secrets.OCI_VM_PATH || '/var/www/html' }}/dist
