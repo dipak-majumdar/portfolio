@@ -7,7 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docker:dev": "docker-compose --profile dev up",
+    "docker:dev-build": "docker-compose --profile dev up --build",
+    "docker:prod": "docker-compose --profile prod up",
+    "docker:prod-build": "docker-compose --profile prod up --build",
+    "docker:down": "docker-compose down"
   },
   "dependencies": {
     "react": "^19.1.1",
