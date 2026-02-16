@@ -12,14 +12,14 @@ import { pageSEO } from '../consts/seo';
 
 function Home({ home, skills, education }) {
   useMetaTags(pageSEO.home);
-  
+
   return (
     <>
       <Hero name={home.hero.name} title={home.hero.title} description={home.hero.description} button={home.hero.button} status={home.hero.status} />
       <About section={home.about} />
+      <Experiences section={home.experiences} />
       <Projects section={home.projects} />
       <Skills section={home.skills} t={skills} />
-      <Experiences section={home.experiences} />
       <Education section={education} />
       <About section={home.summary} />
     </>

@@ -69,33 +69,33 @@
                 "title": "Experience",
                 "items": [
                     {
-                        "title": "Frontend Developer",
-                        "company": "Leelija Web Solutions Private Limited.",
-                        "period": "2022 - Present",
-                        "description": "Developing and maintaining web applications using React.js and modern JavaScript. Collaborating with cross-functional teams to deliver high-quality products."
+                        "title": "Application Developer",
+                        "company": "Web Idea Solutions LLP.",
+                        "period": "Jan/2026 - Present",
+                        "description": "Developing and maintaining web applications using Django, FastAPI, React.js and modern VPS. Collaborating with cross-functional teams to deliver high-quality products."
                     },
                     {
                         "title": "Full Stack Developer",
                         "company": "Leelija Web Solutions Private Limited.",
-                        "period": "2021 - 2022",
-                        "description": "Built responsive websites and web applications. Worked with HTML, CSS, and JavaScript to create engaging user experiences."
+                        "period": "Nov/2023 - Dec/2025",
+                        "description": "Built responsive websites and web applications. Worked with Laravel, Django, React Js and MySql."
                     }
                 ]
             },
-            "strengths":{
-                "title" : "Strenths",
+            "strengths": {
+                "title": "Strenths",
                 "item": [
                     {
                         "name": "Problem-Solving: ",
-                        "description" : "Strong ability to identify and resolve complex issues, ensuring secure, efficient, and user-friendly web applications."
+                        "description": "Strong ability to identify and resolve complex issues, ensuring secure, efficient, and user-friendly web applications."
                     },
                     {
                         "name": "Collaborative Team Player: ",
-                        "description" : "Effective at collaborating with team members, leveraging diverse perspectives to achieve project goals and deliver successful outcomes."
+                        "description": "Effective at collaborating with team members, leveraging diverse perspectives to achieve project goals and deliver successful outcomes."
                     },
                     {
                         "name": "Adaptability: ",
-                        "description" : "Thrive in dynamic environments with a commitment to continuous learning and staying updated on industry trends and technologies."
+                        "description": "Thrive in dynamic environments with a commitment to continuous learning and staying updated on industry trends and technologies."
                     }
                 ]
             },

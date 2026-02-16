@@ -1,7 +1,7 @@
 export default {
     language: ["Java", "PHP", "Python", "Javascript"],
-    framework: ["Laravel", "Django", "React"],
-    backend: ["MySql", "Rest API"],
+    framework: ["Django", "FastAPI", "Laravel", "React"],
+    backend: ["MySql", "PostgreSQL", "RestAPI"],
     frontend: ["HTML", "CSS", "Bootstrap", "Tailwind"],
     tool: ["Jenkins", "Figma", "Git/Github", "WordPress", "JIRA", "Vibe Coding"],
 }
